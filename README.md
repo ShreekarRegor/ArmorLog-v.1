@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+# ArmorLog – Blockchain Based Defense Logging System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ArmorLog is a blockchain-based defense logging system designed to securely store and monitor sensitive mission records and activity logs. The platform focuses on data integrity, tamper-proof storage, and intelligent activity monitoring using blockchain and AI-based tools.
 
-## Available Scripts
+The project combines smart contracts, real-time databases, AI integrations, and secure authentication to create a modern defense-oriented logging platform.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+# Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Blockchain-based secure logging system
+- Tamper-proof mission record storage
+- Smart contract integration using Solidity
+- Real-time alert generation
+- Firebase authentication and database integration
+- AI-powered activity detection
+- Secure transaction handling with MetaMask
+- Responsive and modern user interface
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+# Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Frontend
+- React.js
+- Tailwind CSS
+- JavaScript
 
-### `npm run build`
+## Backend & Blockchain
+- Solidity
+- MetaMask
+- Firebase
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## AI & Detection
+- OpenCV
+- SpaCy
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tools
+- Git & GitHub
+- VS Code
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+# Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+ArmorLog-v.1-main/
+│
+├── client/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   └── assets/
+│
+├── smart-contracts/
+│   ├── Solidity contracts
+│   └── deployment scripts
+│
+├── firebase/
+│
+└── README.md
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Smart Contract Example
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```solidity
+pragma solidity ^0.8.0;
 
-## Learn More
+contract MissionLog {
+    string[] public logs;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    function addLog(string memory _log) public {
+        logs.push(_log);
+    }
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+# Firebase Authentication Example
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```javascript
+const loginUser = async (email, password) => {
+  await signInWithEmailAndPassword(auth, email, password);
+};
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# AI Detection Example
 
-### Making a Progressive Web App
+```python
+import cv2
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+camera = cv2.VideoCapture(0)
+ret, frame = camera.read()
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Installation & Setup
 
-### Deployment
+## Clone Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+git clone <repository-link>
+```
 
-### `npm run build` fails to minify
+## Navigate to Project Folder
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+cd ArmorLog-v.1-main
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Start Development Server
+
+```bash
+npm run dev
+```
+
+---
+
+# Key Learning Outcomes
+
+- Blockchain and smart contract development
+- Firebase authentication and real-time database integration
+- AI-based activity detection using OpenCV and SpaCy
+- Frontend-backend integration
+- Debugging transaction and authentication workflows
+- Secure data handling and workflow optimization
+
+---
+
+# Future Enhancements
+
+- Advanced AI threat detection
+- Multi-user role-based access
+- Cloud deployment
+- End-to-end encrypted communication
+- Real-time analytics dashboard
+- Automated anomaly detection system
+
+# License
+
+This project is created for educational and learning purposes.
